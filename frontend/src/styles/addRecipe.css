@@ -1,0 +1,139 @@
+.add-recipe {
+  max-width: 850px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  font-family: "Inter", sans-serif;
+}
+
+.add-recipe h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #333;
+}
+
+/* ===== FORMULAIRE ===== */
+
+.add-recipe form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.add-recipe label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #444;
+  gap: 6px;
+}
+
+.add-recipe input[type="text"],
+.add-recipe input[type="number"],
+.add-recipe textarea {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: 0.2s;
+  background: #fafafa;
+}
+
+.add-recipe textarea {
+  height: 140px;
+  resize: vertical;
+}
+
+.add-recipe input:focus,
+.add-recipe textarea:focus {
+  border-color: #6c63ff;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+}
+
+/* ===== INGREDIENTS ===== */
+
+.add-recipe h2 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.ingredient-row {
+  display: grid;
+  grid-template-columns: 1fr 120px 120px auto;
+  gap: 15px;
+  align-items: center;
+  padding: 15px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  border: 1px solid #e2e2e2;
+}
+
+.ingredient-row input {
+  background: white !important;
+}
+
+.remove-ingredient {
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #ff5b5b;
+  transition: 0.2s;
+}
+
+.remove-ingredient:hover {
+  color: #cc0000;
+}
+
+/* ===== BOUTONS ===== */
+
+.add-recipe button[type="button"] {
+  align-self: start;
+  background: #6c63ff;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-recipe button[type="button"]:hover {
+  background: #5a54d0;
+}
+
+.add-recipe button[type="submit"] {
+  margin-top: 10px;
+  background: #28a745;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-recipe button[type="submit"]:hover {
+  background: #218838;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 700px) {
+  .ingredient-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ingredient-row button {
+    grid-column: span 2;
+    justify-self: end;
+  }
+}
